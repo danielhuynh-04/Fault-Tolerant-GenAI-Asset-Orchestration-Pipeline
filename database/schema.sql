@@ -1,5 +1,5 @@
 -- ============================================================
--- AI Asset Generation Automation Pipeline
+-- Fault-Tolerant GenAI Asset Orchestration Pipeline
 -- Database Schema (SQLite via SQLAlchemy)
 -- ============================================================
 

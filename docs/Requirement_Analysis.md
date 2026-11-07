@@ -1,21 +1,21 @@
 # Requirement Analysis
-## Project: AI Asset Generation Automation Pipeline
-## Domain: Game Asset Generation & Cloud Orchestration
+## Project: Fault-Tolerant GenAI Asset Orchestration Pipeline
+## Domain: Multimodal GenAI Asset Orchestration & Cloud Resilience
 ### Date: 2026-07-14
 
 ---
 
 ## 1. Objective
 
-Build an end-to-end AI automation workflow capable of:
+Build an end-to-end, fault-tolerant GenAI orchestration pipeline capable of:
 - **FR-01** Reading asset generation requests from Google Sheets
 - **FR-02** Validating each input row (null check, format check, model routing)
-- **FR-03** Generating visual game assets via AI (Gemini Imagen / Pollinations.ai)
+- **FR-03** Generating visual game assets via AI (Gemini Imagen 3 / Pollinations.ai Flux failover)
 - **FR-04** Uploading generated assets to Google Drive with structured folder naming
-- **FR-05** Logging all job states to a relational database (SQLite)
-- **FR-06** Sending real-time Slack notifications (success + failure)
-- **FR-07** Sending Email notifications via SMTP
-- **FR-08** Generating daily summary reports with analytics charts (Plotly)
+- **FR-05** Logging all job states to a relational database (SQLite via SQLAlchemy ORM)
+- **FR-06** Sending real-time Slack Block Kit notifications (success + failure)
+- **FR-07** Sending Email notifications via Gmail API OAuth 2.0 scoped tokens
+- **FR-08** Generating daily telemetry reports with interactive analytics charts (Plotly)
 
 ---
 
@@ -59,7 +59,7 @@ Build an end-to-end AI automation workflow capable of:
 | AI Text Model | Gemini Pro Flash (gemini-2.0-flash, free tier) |
 | Audio Model | gTTS (Google Text-to-Speech, free) |
 | Database | SQLite (local) — no cloud DB required |
-| Notification | Slack webhook (free) + Gmail SMTP with App Password |
+| Notification | Slack Block Kit webhook + Gmail API via OAuth 2.0 Web Consent (Scoped Tokens) |
 | Scheduling | APScheduler (in-process) — no Celery/Redis required |
 | Runtime | Python 3.11+, Windows OS |
 

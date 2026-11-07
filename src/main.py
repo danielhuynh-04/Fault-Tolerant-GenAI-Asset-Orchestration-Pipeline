@@ -183,7 +183,7 @@ def run_pipeline():
     4. Log kết quả từng bước
     """
     logger.info("=" * 60)
-    logger.info("[START] AI Asset Generation Pipeline")
+    logger.info("[START] Fault-Tolerant GenAI Asset Orchestration Pipeline")
     logger.info(f"[DATE] {date.today().isoformat()}")
     logger.info("=" * 60)
 
@@ -230,7 +230,7 @@ def run_pipeline():
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="AI Asset Generation Pipeline")
+    parser = argparse.ArgumentParser(description="Fault-Tolerant GenAI Asset Orchestration Pipeline")
     parser.add_argument("--report-only", action="store_true", help="Only generate daily report")
     parser.add_argument("--with-scheduler", action="store_true", help="Start daily report scheduler")
     args = parser.parse_args()
